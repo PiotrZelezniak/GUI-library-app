@@ -4,8 +4,8 @@ import datetime
 
 def get_selected_row(event):
     global selected_tuple
-    index=list1.curselection()[0]#this [0] means we are taking just first item in tuple, like we just get number not tuple
-    selected_tuple=list1.get(index) #this let take us all of the elements form tuple. Sooo ISBN, author or title
+    index=list1.curselection()[0]
+    selected_tuple=list1.get(index) 
     e1.delete(0,END)
     e1.insert(END,selected_tuple[1])
     e2.delete(0, END)
@@ -125,4 +125,3 @@ b6=Button(window,text="Close",width=12, command=window.destroy)
 b6.grid(row=8, column=5)
 
 window.mainloop()
-print(type(datetime.date.today()))
